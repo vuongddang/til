@@ -20,6 +20,17 @@ repositories {
 }
 
 dependencies {
+    // Exposed
+    implementation("org.jetbrains.exposed", "exposed-core", "0.40.1")
+    implementation("org.jetbrains.exposed", "exposed-dao", "0.40.1")
+    implementation("org.jetbrains.exposed", "exposed-jdbc", "0.40.1")
+    // MySQL JDBC Driver
+    implementation("mysql:mysql-connector-java:8.0.19")
+    // Connection pool
+    implementation("com.zaxxer:HikariCP:5.0.1")
+
+    // Test containers
+    testImplementation("org.testcontainers:mysql:1.18.3")
     // Use the Kotlin JUnit 5 integration.
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
     // Use the JUnit 5 integration.
