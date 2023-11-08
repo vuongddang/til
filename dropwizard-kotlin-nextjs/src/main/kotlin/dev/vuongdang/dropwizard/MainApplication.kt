@@ -1,4 +1,4 @@
-package dev.vuongdang.dropwizard.app
+package dev.vuongdang.dropwizard
 
 import dev.vuongdang.dropwizard.config.Config
 import dev.vuongdang.dropwizard.resource.HelloWorldResource
@@ -11,7 +11,7 @@ class MainApplication : Application<Config>() {
 
     override fun initialize(bootstrap: Bootstrap<Config>?) {
         // Initialization logic here
-        bootstrap!!.addBundle(AssetsBundle("/assets/", "/"))
+        bootstrap!!.addBundle(AssetsBundle("/assets/", "/", "index.html"))
     }
 
     override fun run(configuration: Config, environment: Environment) {
