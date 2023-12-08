@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--language", default = "Python")  # or "JavaScript" or "C#" or "TypeScript" or "PHP" or "Ruby" or "Go" or "Rust" or "Java" or "C" or "C++" or "Swift" or "Kotlin
+parser.add_argument("--language", default = "Python")
 parser.add_argument("--task", default = "return the square of a number")
 args = parser.parse_args()
 
