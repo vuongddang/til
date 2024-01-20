@@ -19,7 +19,5 @@ user_proxy = UserProxyAgent(
     is_termination_msg=lambda x: x.get("content", "").rstrip().endswith("TERMINATE"),
     code_execution_config={"work_dir": "coding", "use_docker": False},
     llm_config={"config_list": config_list_mistral},
-    system_message="""Reply TERMINATE if the task has been solved at full satisfaction.
-        Otherwise, reply CONTINUE, or the reason why the task is not solved yet."""
 )
 user_proxy.initiate_chat(assistant, message="Write  python script to output number from 1 to 10")
